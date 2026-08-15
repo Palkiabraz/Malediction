@@ -36,4 +36,4 @@ slidesContainer.addEventListener('dblclick', prevSlide);
 
 setInterval(() => {
     nextSlide();
-}, 3000);
+}, 10000);

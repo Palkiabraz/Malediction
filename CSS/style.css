@@ -11,7 +11,8 @@
 
 body {
     font-family: Arial;
-    background: radial-gradient(circle at top, #2c2c46 0%, #15151c 40%, #090909 100%);
+    background: url('../Images/Fond.png') no-repeat center center fixed;
+    background-size: cover;
     color: #ffffff;
     min-height: 100vh;
 }
@@ -71,16 +72,37 @@ nav ul {
 }
 
 nav a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding-left: 30px;
     color: #ffffff;
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
-    transition: color 0.3s ease;
     font-family: 'Pokemon Solid';
+    transition: color 0.2s ease;
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 42%;
+    width: 16px;
+    height: 16px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.15s ease;
 }
 
 nav a:hover {
-    color: #a9a9ff;
+    color: #ffffff;
+}
+
+nav a:hover::before {
+    content: url('../Images/Selection.png');
+    opacity: 1;
 }
 
 .footer {
