@@ -166,6 +166,7 @@ button.button-printable, button.button-workshop, button.button-steam {
     text-decoration: none;
     padding: 0.6rem;
     background-color: rgba(0, 0, 0, 0.45);
+    border: 2px solid #454577;
 }
 
 .button-printable .button-text, .button-workshop .button-text, .button-steam .button-text {
