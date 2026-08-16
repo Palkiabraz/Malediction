@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Malédiction</title>
     <link rel="stylesheet" href="./CSS/style.css">
-    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="./CSS/pokedex.css">
     <link rel="icon" href="./Images/Icone.png">
 </head>
 
@@ -14,7 +14,7 @@
         <div class="logo">
             <div class="logo-container">
                 <img src="./Images/Logo.PNG" alt="Logo de Malédiction">
-                <p class="logo-credit">Logo réalisé par <a href="https://www.instagram.com/emeebsx" target="_blank">@emeebsx</a></p>
+                <p class="logo-credit">Logo réalisé par <a href="https://www.instagram.com/emeebsx" target="_blank" rel="noopener noreferrer">@emeebsx</a></p>
             </div>
         </div>
         <nav>
@@ -24,11 +24,34 @@
             </ul>
         </nav>
     </header>
+
+    <main class="pokedex-page">
+        <section class="catalogue-header">
+            <label class="search-bar" for="card-search">
+                <input id="card-search" type="search" placeholder="Rechercher un Pokémon" aria-label="Rechercher un Pokémon">
+            </label>
+            <div class="search-results-line">
+                <span id="search-results" aria-live="polite">0 Pokémon trouvés en utilisant les filtres de recherche</span>
+            </div>
+        </section>
+
+        <section id="card-catalog" class="card-catalog" aria-live="polite"></section>
+    </main>
+
+    <div id="card-modal" class="card-modal" aria-hidden="true">
+        <div class="card-modal-content" role="dialog" aria-modal="true">
+            <button id="modal-close" class="modal-close" type="button" aria-label="Fermer la carte">×</button>
+            <img id="modal-image" src="" alt="Carte en grand format">
+        </div>
+    </div>
+
     <footer>
-		<div class="footer">
-			<p><i><u>Malédiction</u> se conforme aux conditions générales d'utilisation demandées par The Pokémon Company tout en respectant les droits de propriété intellectuelle afférents à Pokémon</i></p>
-			<p><i><u>Malédiction</u> est inscrit dans l'initiative <u><a href="https://atelier197.carrd.co/" target="_blank" rel="noopener noreferrer">Atelier 197</a></i></u></p>
-		</div>
-	</footer>
+        <div class="footer">
+            <p><i><u>Malédiction</u> se conforme aux conditions générales d'utilisation demandées par The Pokémon Company tout en respectant les droits de propriété intellectuelle afférents à Pokémon</i></p>
+            <p><i><u>Malédiction</u> est inscrit dans l'initiative <u><a href="https://atelier197.carrd.co/" target="_blank" rel="noopener noreferrer">Atelier 197</a></i></u></p>
+        </div>
+    </footer>
+
+    <script src="./JS/pokedex.js"></script>
 </body>
 </html>

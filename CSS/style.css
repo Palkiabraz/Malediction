@@ -10,11 +10,13 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: Arial;
     background: url('../Images/Fond.png') no-repeat center center fixed;
     background-size: cover;
     color: #ffffff;
-    min-height: 100vh;
 }
 
 header {
@@ -105,6 +107,10 @@ nav a:hover::before {
     opacity: 1;
 }
 
+main {
+    flex: 1;
+}
+
 .footer {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.55);
@@ -114,6 +120,7 @@ nav a:hover::before {
     color: #fff;
     font-size: 1rem;
     line-height: 1.4;
+    margin-top: auto;
 }
 
 .footer a, .footer a:visited {
@@ -139,12 +146,6 @@ nav a:hover::before {
         gap: 18px;
         flex-wrap: wrap;
         justify-content: center;
-    }
-
-    .hero {
-        grid-template-columns: 1fr;
-        margin-top: 40px;
-        gap: 30px;
     }
 }
 
