@@ -54,7 +54,7 @@ function normalizeText(value = '') {
 }
 
 function updateResultsCounter(count) {
-  resultsCounter.textContent = `${count} Pokémon trouvés en utilisant les filtres de recherche`;
+  resultsCounter.textContent = `${count} Pokémon trouvés en utilisant le filtre de recherche`;
 }
 
 function createCardElement(card) {
