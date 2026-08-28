@@ -53,29 +53,21 @@ header {
 
 .curse-link {
     position: absolute;
-    right: 24px;
-    top: 50%;
-    transform: translateY(-50%);
+    right: 10px;
+    bottom: 10px;
     text-decoration: none;
 }
 
 .curse-placeholder {
-    display: grid;
-    place-items: center;
+    display: block;
     width: 108px;
     height: 64px;
-    border: 2px dashed rgba(255, 255, 255, 0.6);
-    background: rgba(10, 10, 10, 0.22);
-    color: rgba(255, 255, 255, 0.8);
-    font-family: 'Pokemon Solid';
-    font-size: 1rem;
-    letter-spacing: 1px;
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    object-fit: contain;
+    transition: transform 0.2s ease;
 }
 
 .curse-link:hover .curse-placeholder {
     transform: scale(1.06);
-    background: rgba(10, 10, 10, 0.4);
 }
 
 .logo-credit {
@@ -183,9 +175,6 @@ main {
         width: 100%;
     }
 
-    .curse-link {
-        right: 0;
-    }
 }
 
 @media (max-width: 480px) {
@@ -197,14 +186,9 @@ main {
         width: 180px;
     }
 
-    .curse-link {
-        right: -8px;
-    }
-
     .curse-placeholder {
         width: 76px;
         height: 48px;
-        font-size: 0.8rem;
     }
 
     nav ul {
