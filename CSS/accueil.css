@@ -176,28 +176,9 @@ button.button-printable, button.button-workshop, button.button-steam {
     margin: 0;
 }
 
-#ttprice {
-    color: #fff;
-    font-family: Arial;
-    font-size: 1rem;
-    margin: 0;
-}
-
 .button-with-price {
     position: relative;
     display: inline-block;
-}
-
-.button-with-price #ttprice {
-    position: absolute;
-    top: 8px; 
-    right: 8px;
-    font-weight: bold;
-    color: #fff;
-    font-family: Arial;
-    font-size: 1.4rem;
-    margin: 0;
-    pointer-events: none;
 }
 
 @media (max-width: 820px) {
