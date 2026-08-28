@@ -11,12 +11,15 @@
 
 <body>
     <header>
-        <div class="logo">
-            <a href="https://palkiabraz.github.io/Curse/pokedex.html" target="_blank" rel="noopener noreferrer" title="Switch to English">
+        <div class="header-top">
+            <div class="logo">
                 <div class="logo-container">
                     <img src="./Images/Logo.PNG" alt="Logo de Malédiction">
                     <p class="logo-credit">Logo réalisé par <a href="https://www.instagram.com/emeebsx" target="_blank" rel="noopener noreferrer">@emeebsx</a></p>
                 </div>
+            </div>
+            <a class="curse-link" href="https://palkiabraz.github.io/Curse/pokedex.html" target="_blank" rel="noopener noreferrer" title="Découvrir Curse">
+                <span class="curse-placeholder" role="img" aria-label="Placeholder pour le visuel Curse">CURSE</span>
             </a>
         </div>
         <nav>
@@ -32,12 +35,64 @@
             <label class="search-bar" for="card-search">
                 <input id="card-search" type="search" placeholder="Rechercher un Pokémon" aria-label="Rechercher un Pokémon">
             </label>
+            <details class="generation-filter">
+                <summary>Filtrer par génération</summary>
+                <div class="generation-options">
+                    <label><input id="generation-all" type="checkbox" checked> Toutes</label>
+                    <label><input type="checkbox" value="1"> Génération I</label>
+                    <label><input type="checkbox" value="2"> Génération II</label>
+                    <label><input type="checkbox" value="3"> Génération III</label>
+                    <label><input type="checkbox" value="4"> Génération IV</label>
+                    <label><input type="checkbox" value="5"> Génération V</label>
+                    <label><input type="checkbox" value="6"> Génération VI</label>
+                    <label><input type="checkbox" value="7"> Génération VII</label>
+                    <label><input type="checkbox" value="8"> Génération VIII</label>
+                    <label><input type="checkbox" value="9"> Génération IX</label>
+                </div>
+            </details>
             <div class="search-results-line">
                 <span id="search-results" aria-live="polite">0 Pokémon trouvés en utilisant le filtre de recherche</span>
             </div>
         </section>
 
-        <section id="card-catalog" class="card-catalog" aria-live="polite"></section>
+        <section id="card-catalog" class="card-catalog" aria-live="polite">
+            <button class="catalog-card" type="button" data-name="archeduc" data-generation="7" data-sound="./Sons/Archeduc.ogg" aria-label="Afficher Archeduc"><img src="./Images/Cartes/Archeduc.png" alt="Archeduc" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="banshitrouye" data-generation="6" data-sound="./Sons/Banshitrouye.ogg" aria-label="Afficher Banshitrouye"><img src="./Images/Cartes/Banshitrouye.png" alt="Banshitrouye" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="branette" data-generation="3" data-sound="./Sons/Branette.ogg" aria-label="Afficher Branette"><img src="./Images/Cartes/Branette.png" alt="Branette" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="corayome" data-generation="8" data-sound="./Sons/Corayome.ogg" aria-label="Afficher Corayome"><img src="./Images/Cartes/Corayome.png" alt="Corayome" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="courrousinge" data-generation="9" data-sound="./Sons/Courrousinge.ogg" aria-label="Afficher Courrousinge"><img src="./Images/Cartes/Courrousinge.png" alt="Courrousinge" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="desseliande" data-generation="6" data-sound="./Sons/Desseliande.ogg" aria-label="Afficher Desseliande"><img src="./Images/Cartes/Desseliande.png" alt="Desseliande" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="ectoplasma" data-generation="1" data-sound="./Sons/Ectoplasma.ogg" aria-label="Afficher Ectoplasma"><img src="./Images/Cartes/Ectoplasma.png" alt="Ectoplasma" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="exagide" data-generation="6" data-sound="./Sons/Exagide.ogg" aria-label="Afficher Exagide"><img src="./Images/Cartes/Exagide.png" alt="Exagide" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="flamigator" data-generation="9" data-sound="./Sons/Flamigator.ogg" aria-label="Afficher Flamigator"><img src="./Images/Cartes/Flamigator.png" alt="Flamigator" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="golemastoc" data-generation="5" data-sound="./Sons/Golemastoc.ogg" aria-label="Afficher Golemastoc"><img src="./Images/Cartes/Golemastoc.png" alt="Golemastoc" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="grodrive" data-generation="4" data-sound="./Sons/Grodrive.ogg" aria-label="Afficher Grodrive"><img src="./Images/Cartes/Grodrive.png" alt="Grodrive" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="gromago" data-generation="9" data-sound="./Sons/Gromago.ogg" aria-label="Afficher Gromago"><img src="./Images/Cartes/Gromago.png" alt="Gromago" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="lanssorien" data-generation="8" data-sound="./Sons/Lanssorien.ogg" aria-label="Afficher Lanssorien"><img src="./Images/Cartes/Lanssorien.png" alt="Lanssorien" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="lugulabre" data-generation="5" data-sound="./Sons/Lugulabre.ogg" aria-label="Afficher Lugulabre"><img src="./Images/Cartes/Lugulabre.png" alt="Lugulabre" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="magireve" data-generation="4" data-sound="./Sons/Magireve.ogg" aria-label="Afficher Magireve"><img src="./Images/Cartes/Magireve.png" alt="Magireve" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="malvalame" data-generation="9" data-sound="./Sons/Malvalame.ogg" aria-label="Afficher Malvalame"><img src="./Images/Cartes/Malvalame.png" alt="Malvalame" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="mimiqui" data-generation="7" data-sound="./Sons/Mimiqui.ogg" aria-label="Afficher Mimiqui"><img src="./Images/Cartes/Mimiqui.png" alt="Mimiqui" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="momartik" data-generation="4" data-sound="./Sons/Momartik.ogg" aria-label="Afficher Momartik"><img src="./Images/Cartes/Momartik.png" alt="Momartik" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="motisma" data-generation="4" data-sound="./Sons/Motisma.ogg" aria-label="Afficher Motisma"><img src="./Images/Cartes/Motisma.png" alt="Motisma" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="moyade" data-generation="5" data-sound="./Sons/Moyade.ogg" aria-label="Afficher Moyade"><img src="./Images/Cartes/Moyade.png" alt="Moyade" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="munja" data-generation="3" data-sound="./Sons/Munja.ogg" aria-label="Afficher Munja"><img src="./Images/Cartes/Munja.png" alt="Munja" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="noctunoir" data-generation="4" data-sound="./Sons/Noctunoir.ogg" aria-label="Afficher Noctunoir"><img src="./Images/Cartes/Noctunoir.png" alt="Noctunoir" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="ossatueur" data-generation="1" data-sound="./Sons/Ossatueur.ogg" aria-label="Afficher Ossatueur"><img src="./Images/Cartes/Ossatueur.png" alt="Ossatueur" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="paragruel" data-generation="8" data-sound="./Sons/Paragruel.ogg" aria-label="Afficher Paragruel"><img src="./Images/Cartes/Paragruel.png" alt="Paragruel" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="polthegeist" data-generation="8" data-sound="./Sons/Polthegeist.ogg" aria-label="Afficher Polthegeist"><img src="./Images/Cartes/Polthegeist.png" alt="Polthegeist" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="sinistrail" data-generation="7" data-sound="./Sons/Sinistrail.ogg" aria-label="Afficher Sinistrail"><img src="./Images/Cartes/Sinistrail.png" alt="Sinistrail" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="spiritomb" data-generation="4" data-sound="./Sons/Spiritomb.ogg" aria-label="Afficher Spiritomb"><img src="./Images/Cartes/Spiritomb.png" alt="Spiritomb" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="tenefix" data-generation="3" data-sound="./Sons/Tenefix.ogg" aria-label="Afficher Tenefix"><img src="./Images/Cartes/Tenefix.png" alt="Tenefix" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="theffroyable" data-generation="9" data-sound="./Sons/Theffroyable.ogg" aria-label="Afficher Theffroyable"><img src="./Images/Cartes/Theffroyable.png" alt="Theffroyable" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="tomberro" data-generation="9" data-sound="./Sons/Tomberro.ogg" aria-label="Afficher Tomberro"><img src="./Images/Cartes/Tomberro.png" alt="Tomberro" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="trepassable" data-generation="7" data-sound="./Sons/Trepassable.ogg" aria-label="Afficher Trepassable"><img src="./Images/Cartes/Trepassable.png" alt="Trepassable" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="tutankafer" data-generation="5" data-sound="./Sons/Tutankafer.ogg" aria-label="Afficher Tutankafer"><img src="./Images/Cartes/Tutankafer.png" alt="Tutankafer" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="tutetekri" data-generation="8" data-sound="./Sons/Tutetekri.ogg" aria-label="Afficher Tutetekri"><img src="./Images/Cartes/Tutetekri.png" alt="Tutetekri" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="typhlosion" data-generation="2" data-sound="./Sons/Typhlosion.ogg" aria-label="Afficher Typhlosion"><img src="./Images/Cartes/Typhlosion.png" alt="Typhlosion" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="virevorreur" data-generation="9" data-sound="./Sons/Virevorreur.ogg" aria-label="Afficher Virevorreur"><img src="./Images/Cartes/Virevorreur.png" alt="Virevorreur" loading="lazy"></button>
+            <button class="catalog-card" type="button" data-name="zoroark" data-generation="5" data-sound="./Sons/Zoroark.ogg" aria-label="Afficher Zoroark"><img src="./Images/Cartes/Zoroark.png" alt="Zoroark" loading="lazy"></button>
+        </section>
     </main>
 
     <div id="card-modal" class="card-modal" aria-hidden="true">
