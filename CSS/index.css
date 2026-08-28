@@ -1,239 +1,76 @@
-.presentation {
-    max-width: 1320px;
-    margin: 70px auto 30px;
-    padding: 0 18px;
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    align-items: center;
-    gap: 1px;
-}
-
-.carousel {
-    position: relative;
-    width: 100%;
-    max-width: 360px;
-    margin: 0 auto;
-}
-
-.slides {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 455 / 620;
-    border-radius: 0;
+.landing-page {
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.04);
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    cursor: pointer;
 }
 
-.slide {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    opacity: 0;
-    transition: opacity 0.6s ease-in-out;
-    background: rgba(19, 19, 19, 0.8);
+.landing-main {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    padding: 32px 20px;
+    background: rgba(5, 5, 18, 0.16);
 }
 
-.slide.active {
-    opacity: 1;
-}
-
-.carousel-dots {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 18px;
-}
-
-.dot {
-    width: 18px;
-    height: 18px;
-    background-image: url('../Images/Inactif.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
-    transition: transform 0.3s ease, filter 0.3s ease;
-    display: inline-block;
-}
-
-.dot.active {
-    background-image: url('../Images/Actif.png');
-    transform: scale(1.1);
-    filter: none;
-}
-
-.presentation-content {
+.landing-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-
-.presentation-content h1 {
-    font-size: clamp(2rem, 3vw, 3.5rem);
-    line-height: 1;
-    margin-bottom: 20px;
-    font-size: 2.5rem;
-    color: #ffffff;
-    font-family: Arial;
-}
-
-.lead {
-    color: #ffffff;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    max-width: 720px;
-}
-
-.quote {
-    margin-top: 16px;
-    color: #f3f3ff;
-    font-style: italic;
-    font-size: 1.05rem;
-    max-width: 720px;
-}
-
-.buttons-intro {
-    max-width: 1200px;
-    margin: 35px auto 18px;
-    padding: 0 18px;
-    text-align: center;
-    color: #ffffff;
-    font-size: 1.05rem;
-    line-height: 1.8;
-}
-
-.buttons-container {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    gap: 2rem; 
-    margin: 2rem 0; 
-}
-
-.buttons-container button {
-    display: inline-flex;
-    flex-direction: column; 
     align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    border: none;
-    background: none;
-    cursor: pointer;
-}
-
-.buttons-container a img {
-    width: auto;
-    height: 256px;
-    margin: 5px;
-}
-
-.buttons-container a:hover img {
-    transform: scale(1.1);
-    transition: transform 0.3s;
-}
-
-.buttons-container .button-text {
-    font-size: 1rem;
-    color: #fff;
     text-align: center;
 }
 
-.button-printable, .button-workshop, .button-steam {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.25rem;
-    width: auto;
+.launch-button {
+    display: block;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    line-height: 0;
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.launch-button:hover,
+.launch-button:focus-visible {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 22px rgba(255, 255, 255, 0.32));
+}
+
+.launch-button:focus-visible {
+    outline: 3px solid rgba(255, 255, 255, 0.85);
+    outline-offset: 12px;
+}
+
+.launch-button img {
+    display: block;
+    width: clamp(360px, 58vw, 720px);
+    max-width: 88vw;
     height: auto;
-    border-radius: 8px;
-    transition: background-color 0.3s;
-    cursor: pointer;
-    flex: 0 0 auto;
+    filter: drop-shadow(0 12px 16px rgba(0, 0, 0, 0.3));
 }
 
-button.button-printable, button.button-workshop, button.button-steam {
-    background-color: transparent;
-    border: none;
+.logo-credit {
+    margin-top: 22px;
+    color: rgba(255, 255, 255, 0.62);
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    font-style: italic;
 }
 
-.button-printable a, .button-workshop a, .button-steam a {
+.logo-credit a {
+    color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
-    padding: 0.6rem;
-    background-color: rgba(0, 0, 0, 0.45);
 }
 
-.button-printable .button-text, .button-workshop .button-text, .button-steam .button-text {
-    color: #fff;
-    font-family: Arial;
-    font-size: 1.2rem;
-    text-align: center;
-    margin: 0;
-}
-
-#ttprice {
-    color: #fff;
-    font-family: Arial;
-    font-size: 1rem;
-    margin: 0;
-}
-
-.button-with-price {
-    position: relative;
-    display: inline-block;
-}
-
-.button-with-price #ttprice {
-    position: absolute;
-    top: 8px; 
-    right: 8px;
-    font-weight: bold;
-    color: #fff;
-    font-family: Arial;
-    font-size: 1.4rem;
-    margin: 0;
-    pointer-events: none;
-}
-
-@media (max-width: 820px) {
-    .presentation {
-        grid-template-columns: 1fr;
-        margin-top: 40px;
-        gap: 30px;
-    }
-
-    .buttons-container {
-        grid-template-columns: 1fr;
-        padding: 0 20px 30px;
-    }
-
-    .buttons-container > * {
-        max-width: 500px;
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .slides {
-        aspect-ratio: 455 / 620;
-    }
-
-    .presentation-content {
-        text-align: center;
-        align-items: center;
-    }
-
-    .lead {
-        max-width: 100%;
-    }
+.logo-credit a:hover,
+.logo-credit a:focus-visible {
+    color: #ffffff;
+    text-decoration: underline;
 }
 
 @media (max-width: 480px) {
-    .slides {
-        aspect-ratio: 455 / 620;
+    .landing-main {
+        padding: 24px 14px;
+    }
+
+    .launch-button img {
+        width: 88vw;
     }
 }

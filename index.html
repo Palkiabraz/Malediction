@@ -1,101 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malédiction</title>
-    <link rel="stylesheet" href="./CSS/style.css">
-    <link rel="stylesheet" href="./CSS/index.css">
-    <link rel="icon" href="./Images/Icone.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Malédiction</title>
+	<link rel="stylesheet" href="./CSS/style.css">
+	<link rel="stylesheet" href="./CSS/index.css">
+	<link rel="icon" href="./Images/Icone.png">
 </head>
 
-<body>
-    <header>
-        <div class="header-top">
-            <div class="logo">
-                <div class="logo-container">
-                    <img src="./Images/Logo.PNG" alt="Logo de Malédiction">
-                    <p class="logo-credit">Logo réalisé par <a href="https://www.instagram.com/emeebsx" target="_blank" rel="noopener noreferrer">@emeebsx</a></p>
-                </div>
-            </div>
-            <a class="curse-link" href="https://palkiabraz.github.io/Curse/" target="_blank" rel="noopener noreferrer" title="Découvrir Curse">
-                <span class="curse-placeholder" role="img" aria-label="Placeholder pour le visuel Curse">CURSE</span>
-            </a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="pokedex.html">Pokédex</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="presentation">
-        <div class="carousel" aria-label="Carrousel de cartes">
-            <div class="slides">
-                <img class="slide active" src="./Images/Cartes/Tutankafer.png" alt="Tutankafer">
-                <img class="slide" src="./Images/Cartes/Tutetekri.png" alt="Tutétékri">
-                <img class="slide" src="./Images/Cartes/Ectoplasma.png" alt="Ectoplasma">
-                <img class="slide" src="./Images/Cartes/Spiritomb.png" alt="Spiritomb">
-                <img class="slide" src="./Images/Cartes/Mimiqui.png" alt="Mimiqui">
-            </div>
-            <div class="carousel-dots" aria-label="Choix de carte">
-                <span class="dot active" aria-label="Carte 1"></span>
-                <span class="dot" aria-label="Carte 2"></span>
-                <span class="dot" aria-label="Carte 3"></span>
-                <span class="dot" aria-label="Carte 4"></span>
-                <span class="dot" aria-label="Carte 5"></span>
-            </div>
-        </div>
-
-        <div class="presentation-content">
-            <h1>Prenez garde à la malédiction !</h1>
-            <p class="quote">"L’essence même de la nuit n’est que le présage funeste de la peur."</p>
-            <br>
-            <p class="lead">
-                <u>Malédiction</u> est un jeu de société où deux joueurs s'affrontent en usant de cartes aux multiples effets uniques afin de ne pas terminer avec la malédiction à ses côtés.
-                <br>
-                <br>
-                Chaque spectre possède un effet différent ; passer la malédiction, ajouter ou retirer une carte dans la main, annuler ou copier un effet de carte.
-                <br>
-                Chaque joueur commence avec six cartes en main, et l'un des deux joueurs avec la malédiction. À tour de rôle, chaque joueur joue une seule carte de sa main afin de passer la malédiction à l'autre joueur ou d'obtenir un avantage utile par la suite.</p>
-        </div>
-    </main>
-
-	<p class="buttons-intro">
-		<u>Malédiction</u> est disponible gratuitement en version <b>imprimable</b> et en version <b>numérique</b> sur le Steam Workshop de <u>Tabletop Simulator</u>.
-	</p>
-
-	<div class="buttons-container">
-		<button class="button-printable">
-			<a href="./Fichiers/Malediction.zip" download class="button-printable">
-				<img src="./Images/Imprimable.png" alt="Télécharger la version imprimable">
-				<span class="button-text"><b>VERSION IMPRIMABLE</b></span>
-			</a>
-		</button>
-		<button class="button-workshop">
-			<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3644299855" target="_blank"
-				rel="noopener noreferrer" class="button-workshop">
-				<img src="./Images/Numerique.png" alt="Télécharger la version numérique">
-				<span class="button-text"><b>VERSION NUMÉRIQUE</b></span>
-			</a>
-		</button>
-		<div class="button-with-price">
-			<button class="button-steam">
-				<a href="https://store.steampowered.com/app/286160/Tabletop_Simulator/" target="_blank"
-					rel="noopener noreferrer" class="button-steam">
-					<img src="./Images/Steam.png" alt="Acheter Tabletop Simulator">
-					<span class="button-text"><b>TABLETOP SIMULATOR</b></span>
-				</a>
+<body class="landing-page">
+	<main class="landing-main">
+		<div class="landing-content">
+			<button id="launch-button" class="launch-button" type="button" aria-label="Entrer sur le site de Malédiction">
+				<img src="./Images/Logo.PNG" alt="Logo de Malédiction">
 			</button>
-			<p id="ttprice"></p>
+			<p class="logo-credit">Logo réalisé par <a href="https://www.instagram.com/emeebsx" target="_blank" rel="noopener noreferrer">@emeebsx</a></p>
 		</div>
-	</div>
-    <footer>
-		<div class="footer">
-			<p><i><u>Malédiction</u> se conforme aux conditions générales d'utilisation demandées par The Pokémon Company tout en respectant les droits de propriété intellectuelle afférents à Pokémon</i></p>
-			<p><i><u>Malédiction</u> est inscrit dans l'initiative <u><a href="https://atelier197.carrd.co/" target="_blank" rel="noopener noreferrer">Atelier 197</a></i></u></p>
-		</div>
-	</footer>
-    <script src="./JS/slide.js"></script></body>
+	</main>
+
+	<audio id="launch-sound" preload="auto" src="./Sons/Index.mp3"></audio>
+	<script src="./JS/index.js"></script>
+</body>
 </html>
