@@ -65,7 +65,7 @@
     text-decoration: underline;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .landing-main {
         padding: 24px 14px;
     }

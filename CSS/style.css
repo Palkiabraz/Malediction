@@ -60,7 +60,7 @@ header {
 
 .curse-placeholder {
     display: block;
-    width: 108px;
+    width: auto;
     height: 64px;
     object-fit: contain;
     transition: transform 0.2s ease;
@@ -162,33 +162,18 @@ main {
     font-size: 1rem;
 }
 
-@media (max-width: 820px) {
-    header {
-        padding: 20px 0 24px;
-    }
-
-    .header-top {
-        padding: 0 20px;
-    }
-
-    nav {
-        width: 100%;
-    }
-
-}
-
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .header-top {
         min-height: 120px;
     }
 
     .logo img {
-        width: 180px;
+        width: 250px;
     }
 
     .curse-placeholder {
-        width: 76px;
-        height: 48px;
+        width: auto;
+        height: 64px;
     }
 
     nav ul {

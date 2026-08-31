@@ -74,7 +74,6 @@
 }
 
 .presentation-content h1 {
-    font-size: clamp(2rem, 3vw, 3.5rem);
     line-height: 1;
     margin-bottom: 20px;
     font-size: 2.5rem;
@@ -103,7 +102,7 @@
     padding: 0 18px;
     text-align: center;
     color: #ffffff;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     line-height: 1.8;
 }
 
@@ -181,26 +180,48 @@ button.button-printable, button.button-workshop, button.button-steam {
     display: inline-block;
 }
 
-@media (max-width: 820px) {
+@media (max-width: 600px) {
+    .buttons-container {
+        flex-direction: row;
+        flex-wrap: wrap; 
+        gap: 1rem;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .buttons-container > * {
+        flex: 0 0 34%;
+        max-width: 360px;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .buttons-container a {
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .buttons-container a img {
+        height: auto;
+        max-width: 120px;
+        margin: 0 0 0.25rem 0; 
+    }
+
+    .buttons-container .button-text, .button-printable .button-text, .button-workshop .button-text, .button-steam .button-text {
+        font-size: 0.95rem;
+    }
+
+    .button-printable a, .button-workshop a, .button-steam a {
+        padding: 0.4rem;
+        background-color: rgba(0, 0, 0, 0.45);
+    }
+
     .presentation {
         grid-template-columns: 1fr;
         margin-top: 40px;
         gap: 30px;
-    }
-
-    .buttons-container {
-        grid-template-columns: 1fr;
-        padding: 0 20px 30px;
-    }
-
-    .buttons-container > * {
-        max-width: 500px;
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .slides {
-        aspect-ratio: 455 / 620;
     }
 
     .presentation-content {
@@ -208,12 +229,10 @@ button.button-printable, button.button-workshop, button.button-steam {
         align-items: center;
     }
 
-    .lead {
-        max-width: 100%;
+    .presentation-content h1 {
+        font-size: 2.3rem;
     }
-}
 
-@media (max-width: 480px) {
     .slides {
         aspect-ratio: 455 / 620;
     }
