@@ -21,16 +21,21 @@
     display: block;
     padding: 0;
     border: 0;
+    appearance: none;
     background: transparent;
     cursor: pointer;
     line-height: 0;
-    transition: transform 0.35s ease, filter 0.35s ease;
+    transition: transform 0.35s ease;
 }
 
 .launch-button:hover,
 .launch-button:focus-visible {
+    background: transparent;
     transform: scale(1.1);
-    filter: drop-shadow(0 0 22px rgba(255, 255, 255, 0.32));
+}
+
+.launch-button.playing {
+    transform: scale(1.1);
 }
 
 .launch-button:focus-visible {

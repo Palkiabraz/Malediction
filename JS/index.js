@@ -1,14 +1,34 @@
-const launchButton = document.getElementById('launch-button');
-const launchSound = document.getElementById('launch-sound');
+(function () {
+  const button = document.getElementById('launch-button');
+  const audio = document.getElementById('launch-sound');
 
-function enterSite() {
-  window.location.href = './accueil.html';
-}
+  if (!button || !audio) return;
 
-launchButton.addEventListener('click', () => {
-  launchButton.setAttribute('aria-disabled', 'true');
-  launchSound.currentTime = 0;
+  let isRedirecting = false;
 
-  launchSound.addEventListener('ended', enterSite, { once: true });
-  launchSound.play().catch(enterSite);
-});
+  const enterSite = () => {
+    if (isRedirecting) return;
+
+    isRedirecting = true;
+    window.location.href = './accueil.html';
+  };
+
+  const finish = () => {
+    button.classList.remove('playing');
+    enterSite();
+  };
+
+  button.addEventListener('click', () => {
+    if (isRedirecting) return;
+
+    button.classList.add('playing');
+    audio.currentTime = 0;
+    audio.addEventListener('ended', finish, { once: true });
+
+    const playPromise = audio.play();
+
+    if (playPromise && typeof playPromise.catch === 'function') {
+      playPromise.catch(finish);
+    }
+  });
+})();
