@@ -4,12 +4,13 @@
 
   if (!button || !audio) return;
 
-  let isRedirecting = false;
+  let hasStarted = false;
+  let hasRedirected = false;
 
   const enterSite = () => {
-    if (isRedirecting) return;
+    if (hasRedirected) return;
 
-    isRedirecting = true;
+    hasRedirected = true;
     window.location.href = './accueil.html';
   };
 
@@ -19,16 +20,24 @@
   };
 
   button.addEventListener('click', () => {
-    if (isRedirecting) return;
+    if (hasStarted) return;
+    hasStarted = true;
 
     button.classList.add('playing');
     audio.currentTime = 0;
     audio.addEventListener('ended', finish, { once: true });
 
-    const playPromise = audio.play();
-
-    if (playPromise && typeof playPromise.catch === 'function') {
-      playPromise.catch(finish);
+    try {
+      const playPromise = audio.play();
+      if (playPromise && typeof playPromise.catch === 'function') {
+        playPromise.catch((error) => {
+          console.warn('La lecture de Sons/Index.mp3 a échoué.', error);
+          finish();
+        });
+      }
+    } catch (error) {
+      console.warn('La lecture de Sons/Index.mp3 a échoué.', error);
+      finish();
     }
   });
 })();
