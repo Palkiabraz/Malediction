@@ -3,5 +3,5 @@
 ### VOYAGE PARCOURU
 <ins>6 Septembre 2026 :</ins> Sortie du jeu<br>
 
-*Saurez-vous trouver le secret caché de la Malédiction ?*
+*Saurez-vous trouver le secret caché de la Malédiction ?*<br>
 *<ins>Indice :</ins> Il faut avoir beaucoup de chances ...*
